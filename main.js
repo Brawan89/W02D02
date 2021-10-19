@@ -92,7 +92,7 @@ const addValues = (arr) => {
 
 //10
 const countNumberOfElements = (arr) => {
-    const co = arr.reduce((previousValue, currentValue) => {
+    const co = arr.reduce((previousValue) => {
         return previousValue = previousValue+1
        
     },0)
@@ -104,3 +104,74 @@ const countNumberOfElements = (arr) => {
   /* for(const key in object)
   console.log(key ); //show key
   console.log(obj[key]);//show element of key */
+
+
+//1 not done yet....
+  const checkValues = (obj, value) => {
+    for (const key in obj) { 
+      if (key == obj.value){
+        return 
+      }
+       //value === Object.entries(obj)
+        
+     //return value === Object.values(obj) 
+      //console.log(Object.key[obj]);
+      // if( obj[key] === value)
+      // return true;
+    
+  }};
+  
+  //checkValues({name:"ahmed",age:15},15) // => true
+ // checkValues({name:"ahmed",age:15},20) // => false
+
+
+//2
+const courseInfo = {
+  name: "Code 301",
+  duration: { dayTrack: "4 weeks", eveningTrack: "8 weeks" },
+  topics: [
+    "SMACSS",
+    "APIs",
+    "NodeJS",
+    "SQL",
+    "jQuery",
+    "functional programming",
+  ],
+  finalExam: true,
+};
+
+const getCourseKeys = (obj) => {
+  const newArray = [];
+  for(let key in courseInfo) {
+    newArray.push(key);
+  }
+  return newArray;
+   
+};
+//getCourseKeys(courseInfo)// => ['name', 'duration', 'topics', 'finalExam']
+
+
+
+//3
+const updateNumbers = (obj) => {
+  return Object.entries(obj);
+}
+  
+
+//4
+//5 not done yet...
+const totalCharacters = (arr) => {
+  let co = arr.reduce((count, ch) => {
+    co.reduce(ch).length;
+//   let J;
+//   let co = arr.reduce((count, ch) => {
+//     return J.includes(ch) ? count + 1 : count
+//    //  return (previousValue = previousValue).length -1
+   
+// },0)
+          return co
+   } )};
+totalCharacters(["abc","yz"]) // => 5
+
+//6
+
