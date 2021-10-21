@@ -64,11 +64,10 @@ const typeNum = (arr) => {
 
   //7
 const containsAnd = (arr) => {
-    let keyword = "and"; 
-    for (let i = 0; i < arr.length; i++) {
-        const ad = arr.filter(word => { word == keyword   
+    const ad = arr.filter(word => { 
+      return word.indexOf('and')
     });
-     return ad }
+     return ad 
   };
   
 
@@ -77,6 +76,7 @@ const oddValues = (arr) => {
     const m = arr.filter(o => o %2 != 0) 
     return m;
   };
+
 
 //9
 const addValues = (arr) => {
@@ -102,7 +102,7 @@ const countNumberOfElements = (arr) => {
 
 
 
-  // object -------------------------------------------------------------------------------
+// object -------------------------------------------------------------------------------
 
 
 
